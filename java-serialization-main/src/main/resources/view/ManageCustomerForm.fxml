@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="523.0" prefWidth="743.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep8.controller.ManageCustomerFormController">
+   <children>
+      <Label layoutX="168.0" layoutY="7.0" text="Manage Customers" AnchorPane.topAnchor="7.0">
+         <font>
+            <Font name="Ubuntu Bold" size="32.0" />
+         </font>
+      </Label>
+      <VBox layoutX="26.0" layoutY="59.0" prefHeight="157.0" prefWidth="703.0" spacing="10.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="14.0">
+         <children>
+            <HBox prefHeight="25.0" prefWidth="560.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" prefHeight="26.0" prefWidth="70.0" style="-fx-font-family: Ubuntu;" text="ID : " />
+                  <TextField fx:id="txtID" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="38.0" prefWidth="334.0" promptText="Eg. C001" style="-fx-font-family: Ubuntu;" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="560.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" prefHeight="26.0" prefWidth="70.0" style="-fx-font-family: Ubuntu;" text="Name : " />
+                  <TextField fx:id="txtName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="38.0" prefWidth="334.0" promptText="Eg. Dulanga" style="-fx-font-family: Ubuntu;" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="36.0" prefHeight="25.0" prefWidth="560.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" prefHeight="33.0" prefWidth="70.0" style="-fx-font-family: Ubuntu;" text="Address : " />
+                  <TextField fx:id="txtAddress" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="38.0" prefWidth="334.0" promptText="Eg. Matara" style="-fx-font-family: Ubuntu;" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox prefHeight="25.0" prefWidth="560.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" prefHeight="26.0" prefWidth="70.0" style="-fx-font-family: Ubuntu;" text="Picture" />
+                  <TextField fx:id="txtbrows" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="579.0" promptText="brows" style="-fx-font-family: Ubuntu;" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="btnBrowse" mnemonicParsing="false" onAction="#btnBrowse_OnAction" text="....." />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button defaultButton="true" layoutX="188.0" layoutY="224.0" mnemonicParsing="false" onAction="#btnSaveCustomer_OnAction" prefHeight="26.0" prefWidth="119.0" style="-fx-font-family: Ubuntu;" text="Save Customer" />
+      <TableView fx:id="tblCustomers" layoutX="20.0" layoutY="275.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="75.0" style="-fx-font-family: Ubuntu;" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="150.0" style="-fx-font-family: Ubuntu;" text="NAME" />
+            <TableColumn fx:id="colAddress" prefWidth="214.0" style="-fx-font-family: Ubuntu;" text="ADDRESS" />
+            <TableColumn fx:id="colButton" prefWidth="114.0" />
+            <TableColumn fx:id="colPicture" prefWidth="149.0" style="-fx-font-family: Ubuntu;" text="Picture" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnClear" layoutX="378.0" layoutY="228.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: ff726f;" text="Clear" />
+   </children>
+</AnchorPane>
